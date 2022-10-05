@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { breakpoint } from '@carpenjk/prop-x/css';
-import Content from '../Content';
+import { Content } from '../base/base';
 
 
 const StyledHeader = styled(Content)`

@@ -12,7 +12,6 @@ const StyledProfileOverview = styled.div`
 
   ${breakpoint('lg')`
     padding-left: 8px;
-    max-width: 55%;
   `}
 `;
 const ProfileOverview = () => {

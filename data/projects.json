@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Adventure Properties",
+    "tech": [
+      "React",
+      "Next.js",
+      "MongoDB",
+      "StyledComponents"
+    ],
+    "overview": {
+      "headline": "Book your greatest fake vacation!",
+      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "bullets": [
+        "Custom themes styles using semantic names",
+        "Responsive styles set by custom breakpoints",
+        "Theme by variants and states"
+      ]
+    },
+    "links": [
+      {
+        "text": "github",
+        "path": "https://github.com/carpenjk/adventure-properties",
+        "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "Coming soon!",
+        "path": "/link",
+        "icon": "/linkIcons/webIcon.svg"
+      },
+      {
+        "text": "npm",
+        "path": "/npm",
+        "icon": "/linkIcons/npmIcon.svg"
+      }
+    ],
+    "snapshot": {
+      "src": "/snapshots/snapshot-md.png",
+      "alt": "Adventure Properties Screenshot"
+    }
+  },
+  {
+    "name": "Prop-x",
+    "tech": [
+      "React",
+      "Next.js",
+      "MongoDB",
+      "StyledComponents"
+    ],
+    "overview": {
+      "headline": "Book your greatest fake vacation!",
+      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "bullets": [
+        "Custom themes styles using semantic names",
+        "Responsive styles set by custom breakpoints",
+        "Theme by variants and states"
+      ]
+    },
+    "links": [
+      {
+        "text": "github",
+        "path": "https://github.com/carpenjk/prop-x",
+        "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "Coming soon!",
+        "path": "/",
+        "icon": "/linkIcons/webIcon.svg"
+      }
+    ],
+    "snapshot": {
+      "src": "/snapshots/snapshot-md.png",
+      "alt": "Adventure Properties Screenshot"
+    }
+  }
+]

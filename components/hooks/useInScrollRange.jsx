@@ -3,15 +3,11 @@ import useScrollOffset from "./useOffsetTop";
 import useScrollPosition from "./useScrollPoisition";
 
 
-
 const useInScrollRange = ({
   top,
   range,
   target,
 }) => {
-
-  
-
   const offset = useScrollOffset(target);
   const scrollPos = useScrollPosition();
   const [isInScrollRange, setIsInScrollRange] = useState(false);

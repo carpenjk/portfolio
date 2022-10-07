@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { useRef, useState, useEffect } from 'react';
-import {useSpring} from 'react-spring';
-import theme from '../../theme/theme';
+import { useRef} from 'react';
 import useInScrollRange from '../hooks/useInScrollRange';
-import ProjectFilters from './ProjectFilters';
+import ProjectFilters from './projectFilters/ProjectFilters';
 import ProjectList from './ProjectList';
+import useBreakpoints from '@carpenjk/prop-x/useBreakpoints';
+import theme from '../../theme/theme';
 
 const StyledProjects = styled.div`
   position: relative;
@@ -17,52 +17,18 @@ const StyledProjects = styled.div`
   background-color: ${props=> props.theme.colors.indigo3};
 `;
 
-const snapTopAnimation = {
-  from: {
-    opacity: 0
-  },
-  to: {
-   opacity: 1
-  },
-  config:{
-    mass: 1,
-    tension: 210,
-    friction: 20,
-    clamp: true
-  },
-};
-
 const Projects = () => {
+  const br = useBreakpoints(theme);
   const projectsRef = useRef();
-  const isFiltersPinned = useInScrollRange({target: projectsRef, top: 95});
-  const [isMounted, setIsMounted] = useState(false);
-  const [animationStyle, animation] = useSpring(() => ({}));
-
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
-
-  useEffect(() => {
-    if(isMounted && isFiltersPinned){
-      console.log('isFiltersPinned');
-      animation.start(snapTopAnimation);
-      return;
-    }
-    console.log('is not pinned');
-    animation.start({
-      ...snapTopAnimation,
-      reverse: true,
-  });
-  }, [isFiltersPinned, isMounted, animation]);
-
-
+  const isFiltersPinned = useInScrollRange({target: projectsRef, top: br.current.width >= br.br.md ? 121 : 83 });
   return ( 
         <StyledProjects ref={projectsRef}>
           <ProjectFilters 
             isPinned={isFiltersPinned}
-            animation={animationStyle}  />
+            // animation={filterAnimations}  
+          />
           <ProjectList />
-        </StyledProjects> 
+        </StyledProjects>
   );
 };
 export default Projects;

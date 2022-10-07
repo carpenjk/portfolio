@@ -3,26 +3,12 @@ import theme from '../../../theme/theme';
 import { AnimatedSpan } from '../../animation/AnimatedSpan';
 import useBounce from '../../animation/hooks/useBounce';
 import useSpringToggle from '../../animation/hooks/useSpringToggle';
+import { linkHoverAnimation } from '../../animation/other/linkHoverAnimation';
 import AnimatedIndicator from './AnimatedIndicator';
 import StyledNavItem from './styled/NavItem';
 
 const INDICATOR_WIDTH = '60px';
-const hoverAnimation = {
-  to: {
-    width: INDICATOR_WIDTH,
-    backgroundColor: theme.colors.indigo11,
-  },
-  from: {
-    width: '0px',
-    backgroundColor: 'transparent'
-  },
-  config: {
-    mass: 10,
-    tension: 300,
-    friction: 20,
-    clamp: true
-  },
-};
+
 const NavItem = ({children, name, isActive, ...props}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isOn, setIsOn] = useState(isActive);
@@ -31,7 +17,10 @@ const NavItem = ({children, name, isActive, ...props}) => {
     y: -5
   });
 
-  const [hoverAnimationStyle, toggleControl] = useSpringToggle(hoverAnimation);
+  const [hoverAnimationStyle, hoverToggle] = useSpringToggle(linkHoverAnimation({
+    width:INDICATOR_WIDTH,
+    color: theme.colors.indigo11
+  }));
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -53,8 +42,8 @@ const NavItem = ({children, name, isActive, ...props}) => {
   }, [isActive, isHovered]);
 
   useEffect(() => {
-    toggleControl.toggle(isOn);
-  },[isOn, toggleControl]);
+    hoverToggle(isOn);
+  },[isOn, hoverToggle]);
 
   
   return ( 

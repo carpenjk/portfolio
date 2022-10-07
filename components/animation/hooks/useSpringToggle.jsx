@@ -26,21 +26,15 @@ const useSpringToggle = ({
     setIsOn(bln);
   },[]);
 
-
-
   useEffect(() => {
     if(isOn) {
-      api.start({to, from, reset: true, loop, delay, events});
+      api.start({to, from, loop, delay, events});
       return;  
     }
-     api.start({to, from, reset: true, reverse: true, loop, delay, events});
+     api.start({to, from, reverse: true, loop, delay, events});
   }, [isOn, api, from, to, loop, delay, events]);
 
-  const control = useMemo(() => ({
-    toggle,
-    delete: api.delete
-  }) ,[toggle, api]);
-  return ( [styles, control]);
+  return ( [styles, toggle]);
 };
  
 export default useSpringToggle;

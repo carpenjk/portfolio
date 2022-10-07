@@ -1,7 +1,7 @@
 import projects from '../../data/projects.json';
 import { breakpoint } from '@carpenjk/prop-x/css';
 import styled from 'styled-components';
-import Project from './Project';
+import Project from './project/Project';
 
 const StyledProjectList = styled.ul`
     margin-top: 70px;

@@ -1,6 +1,6 @@
 import { breakpoint } from '@carpenjk/prop-x/css';
 import styled from 'styled-components';
-import { AnimatedDiv } from '../../animation/AnimatedDiv';
+import { AnimatedDiv } from '../../../animation/AnimatedDiv';
 import Headline from './Headline';
 import ProjectBullets from './ProjectBullets';
 import ProjectText from './ProjectText';

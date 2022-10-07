@@ -45,7 +45,7 @@ const useProjectInViewAnimations = () => {
   const techStyle = useSpring(techAnimation);
   const linkStyle = useSpring(linkAnimation);
 
-  const timing = inView ? [.5, .75, .75, .75 ] : [0, 0, 0, 0];
+  const timing = inView ? [.25, .75, .75, .75 ] : [0, 0, 0, 0];
   useChain([snapshotRef, overviewRef, techRef, linkRef], timing);
 
   return ({

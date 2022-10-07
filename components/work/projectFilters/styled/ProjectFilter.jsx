@@ -17,6 +17,4 @@ export const  ProjectFilter = styled(Tabs.Trigger)`
   ${breakpoint('md')`
     padding: 18px 24px;
   `}
-
-
 `;

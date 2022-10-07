@@ -1,6 +1,6 @@
 import { breakpoint } from '@carpenjk/prop-x/css';
 import styled from 'styled-components';
-import { AnimatedDiv } from '../animation/AnimatedDiv';
+import { AnimatedDiv } from '../../animation/AnimatedDiv';
 import ProjectLink from './ProjectLink';
 
 const StyledProjectLinks = styled(AnimatedDiv)`

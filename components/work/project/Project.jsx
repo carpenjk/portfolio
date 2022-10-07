@@ -5,7 +5,7 @@ import ProjectTech from './ProjectTech';
 import ProjectSnapshot from './ProjectSnapshot';
 import ProjectOverview from './overview/ProjectOverview';
 import ProjectLinks from './ProjectLinks';
-import useProjectInViewAnimations from '../animation/inView/project/useProjectInViewAnimations';
+import useProjectInViewAnimations from '../../animation/inView/project/useProjectInViewAnimations';
 import { useEffect, useState } from 'react';
 
 const StyledProject = styled.div`

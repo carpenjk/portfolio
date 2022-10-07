@@ -1,7 +1,7 @@
 import { breakpoint } from '@carpenjk/prop-x/css';
 import Image from 'next/image';
 import styled from 'styled-components';
-import { AnimatedDiv } from '../animation/AnimatedDiv';
+import { AnimatedDiv } from '../../animation/AnimatedDiv';
 
 const StyledProjectSnapshot = styled(AnimatedDiv)`
   position: relative;

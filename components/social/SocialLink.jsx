@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import LinkIcon from '../work/LinkIcon';
+import LinkIcon from './LinkIcon';
 import { SocialText } from '../base/SocialText';
 import { breakpoint, condition } from '@carpenjk/prop-x/css';
 import useSpringToggle from "../animation/hooks/useSpringToggle";

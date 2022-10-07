@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Link from 'next/link';
-import LinkIcon from './LinkIcon';
+import LinkIcon from '../../social/LinkIcon';
 import { breakpoint } from '@carpenjk/prop-x/css';
 
 const StyledLink = styled.div`

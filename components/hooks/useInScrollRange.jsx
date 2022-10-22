@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useScrollOffset from "./useOffsetTop";
-import useScrollPosition from "./useScrollPoisition";
+import useScrollPosition from "./useScrollPosition";
 
 
 const useInScrollRange = ({

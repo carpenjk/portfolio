@@ -1,30 +1,6 @@
-import { breakpoint, getProp } from '@carpenjk/prop-x/css';
-import styled from 'styled-components';
-import Badge from './Badge';
+import { StyledBadge } from './StyledBadge';
 import ImageBadge from './ImageBadge';
-
-const StyledBadges = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  align-items: center;
-  width: calc(100% + ${getProp('gap')});
-  margin-left: -${getProp('gap')};
-
-  > * {
-    margin-left: ${getProp('gap')};
-    margin-bottom: ${getProp('gap')};  
-  }
-
-  ${breakpoint(['md', 'lg'])`
-    width: calc(100% + ${getProp('gap')});
-    margin-left: -${getProp('gap')};
-    > * {
-      margin-left: ${getProp('gap')};
-      margin-bottom: ${getProp('gap')};
-    }
-  `}
-`;
+import { StyledBadges } from './styled/StyledBadges';
 
 const nextImage = {
   width:['33px','40px'],
@@ -42,16 +18,16 @@ const npmImage = {
 const Badges = () => {
 return ( 
       <StyledBadges gap={['12px', '18px', '24px']}>
-        <Badge>Javascript</Badge>
-        <Badge>React</Badge>
+        <StyledBadge>Javascript</StyledBadge>
+        <StyledBadge>React</StyledBadge>
         <ImageBadge padding={["0 4px", "0 8px"]} image={nextImage}></ImageBadge>
-        <Badge>Node.js</Badge>
-        <Badge>MongoDB</Badge>
-        <Badge>SQL</Badge>
-        <Badge>GIT</Badge>
+        <StyledBadge>Node.js</StyledBadge>
+        <StyledBadge>MongoDB</StyledBadge>
+        <StyledBadge>SQL</StyledBadge>
+        <StyledBadge>GIT</StyledBadge>
         <ImageBadge padding={["0 6px", "0 8px"]} image={npmImage}></ImageBadge>
-        <Badge>Jest</Badge>
-        <Badge>Contentful</Badge>
+        <StyledBadge>Jest</StyledBadge>
+        <StyledBadge>Contentful</StyledBadge>
       </StyledBadges> 
     );
 };

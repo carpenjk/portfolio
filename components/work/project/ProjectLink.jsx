@@ -29,7 +29,7 @@ const StyledLink = styled.div`
     border-radius: 5px;
   }
 
-  ${breakpoint('lg')`
+  ${breakpoint('xmd')`
     width: calc(225% - 600px);
     min-width: calc(75% + 1px);
     max-width: calc(100% + 2px - calc(600px - 100%));

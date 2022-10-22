@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import styled from 'styled-components';
 import { breakpoint } from '@carpenjk/prop-x/css';
 import { Content } from '../base/base';
@@ -9,27 +10,31 @@ const StyledFooter = styled(Content)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px 16px;
+  padding: 60px 16px;
   background-color: ${props=> props.theme.colors.indigo6};
   border-radius: 5px 5px 0 0;
   z-index: 99;
+  margin-bottom: 82px;
   
   ${breakpoint("md")`
-    padding: 32px 24px;
+    padding: 80px 24px;
+    margin-bottom: 48px;
     bottom: 99999;
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('xmd')`
     border-radius: 10px;
   `}
 `;
 
-const Footer = ({children, ...props}) => {
+const Footer = forwardRef(({children, ...props}, ref) => {
   return (
     <footer>
-      <StyledFooter {...props}>
+      <StyledFooter ref={ref} {...props}>
         {children}
       </StyledFooter>
     </footer> );
-};
+});
+
+Footer.displayName = 'Footer';
 
 export default Footer;

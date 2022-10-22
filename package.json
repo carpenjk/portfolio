@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-playground",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@carpenjk/prop-x": "^1.1.2",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-navigation-menu": "1.0.0",
     "@radix-ui/react-tabs": "1.0.0",

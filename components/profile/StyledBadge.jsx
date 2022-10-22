@@ -1,6 +1,6 @@
 import { breakpoint, getProp } from "@carpenjk/prop-x/css";
 import styled from "styled-components";
-const Badge =  styled.div`
+export const StyledBadge =  styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,11 +31,9 @@ const Badge =  styled.div`
   `}
 `;
 
-Badge.defaultProps = {
+StyledBadge.defaultProps = {
   fontSize: ['14px', '14px','16px'],
   padding: '0 8px',
   imgHeight: ["20px", '32px'],
   imgWidth: 'auto'
 };
-
-export default Badge;

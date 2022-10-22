@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import theme from '../../../theme/theme';
 import { AnimatedSpan } from '../../animation/AnimatedSpan';
 import useBounce from '../../animation/hooks/useBounce';
@@ -9,46 +9,45 @@ import StyledNavItem from './styled/NavItem';
 
 const INDICATOR_WIDTH = '60px';
 
-const NavItem = ({children, name, isActive, ...props}) => {
+const NavItem = ({children, name, itemRef, isActive, isNavigating, ...props}) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isOn, setIsOn] = useState(isActive);
-
   const [itemBounce, itemBounceTrigger] = useBounce({
     y: -5
   });
 
-  const [hoverAnimationStyle, hoverToggle] = useSpringToggle(linkHoverAnimation({
+  const [indicatorAnimationStyle, indicatorToggle] = useSpringToggle(linkHoverAnimation({
     width:INDICATOR_WIDTH,
     color: theme.colors.indigo11
   }));
 
   const handleMouseEnter = () => {
     setIsHovered(true);
-    itemBounceTrigger();
-    setIsOn(true);
-    
   };
   const handleMouseLeave = () => {
     setIsHovered(false);
-    if(!isActive){
-      setIsOn(false);
-    }
   };
 
   useEffect(() => {
-      if(!isHovered) {
-        setIsOn(isActive);
-      }
-  }, [isActive, isHovered]);
+    indicatorToggle(isHovered);
+    if(isHovered){
+      itemBounceTrigger();
+    }
+  }, [isHovered, indicatorToggle, itemBounceTrigger]);
 
   useEffect(() => {
-    hoverToggle(isOn);
-  },[isOn, hoverToggle]);
-
+    if(!isActive){
+      if(!isHovered){
+        indicatorToggle(false);
+      }
+      return;
+    }
+    indicatorToggle(true);
+  },[isActive, isHovered, indicatorToggle]);
   
   return ( 
       <StyledNavItem 
         {...props}
+        ref={itemRef}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
@@ -56,7 +55,7 @@ const NavItem = ({children, name, isActive, ...props}) => {
           {children}
         </AnimatedSpan>
         <AnimatedIndicator
-          style={hoverAnimationStyle}
+          style={indicatorAnimationStyle}
           indicatorWidth={INDICATOR_WIDTH}
           indicatorTop={['auto', '0']}
           indicatorBottom={['0', 'auto'] }

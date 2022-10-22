@@ -1,34 +1,53 @@
-import projects from '../../data/projects.json';
-import { breakpoint } from '@carpenjk/prop-x/css';
-import styled from 'styled-components';
+import { useEffect, useState } from 'react';
+import { useTransition } from 'react-spring';
+import { AnimatedDiv } from '../animation/AnimatedDiv';
+import { StyledProjectList } from './styled/StyledProjectList';
+import { StyledProjectListItem } from './styled/StyledProjectListItem';
+import { StyledMoreButton } from './styled/StyledMoreButton';
 import Project from './project/Project';
 
-const StyledProjectList = styled.ul`
-    margin-top: 70px;
-    width: 100%;
+const INCREMENT = 2;
+const ProjectList = ({projects}) => {
 
-    > li {
-      margin-top: 90px;
-      margin-bottom: 180px;
-    }
-    > li:last-child {
-      margin-bottom: 0;
-    }
+  const [loaded, setLoaded] = useState(projects.slice(0, INCREMENT)); 
+ 
+  useEffect(() => {
+    setLoaded(projects.slice(0, INCREMENT));
+  }, [projects]);
 
-    ${breakpoint('lg')`
-      padding: 0 48px;
+  const transitions = useTransition( loaded, {
+    from: { y: '100vh', opacity: 0  },
+    enter: { y: '0vh', opacity: 1 },
+    // update: { y: '100vh', opacity: 0  },
+    leave: { y: '100vh', opacity: 0 },
+    // delay: 50,
+    reverse: true,
+    config: { mass: 1, tension: 850, friction: 180 },
+    exitBeforeEnter: true,
+    // reset: true,
+    keys: project=> project.name
+  });
 
-      > li {
-        margin-top: 90px;
-        margin-bottom: 225px;
-      }
-    `}
-`;
-const ProjectList = () => {
-return ( 
-    <StyledProjectList>
-      {projects.map((project) => (<li key={project.name}><Project project={project} /></li>))}
-    </StyledProjectList> 
-    );
+  const handleLoadMoreClick = () => {
+   
+    setLoaded(prev => 
+      ([...prev, ...projects.slice(prev.length, prev.length + INCREMENT)]));
+  };
+
+  return ( 
+      <StyledProjectList>
+        {transitions((styles, item) => (
+          <StyledProjectListItem key={item.name}>
+            <AnimatedDiv
+              style={{
+                width: "100%",
+                ...styles}}>
+                <Project project={item} />
+            </AnimatedDiv>
+          </StyledProjectListItem>
+          ))}
+        <StyledMoreButton disabled={loaded.length >= projects.length} type="button" onClick={handleLoadMoreClick}>More Projects</StyledMoreButton>
+      </StyledProjectList> 
+  );
 };
 export default ProjectList;

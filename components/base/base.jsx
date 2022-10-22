@@ -32,6 +32,7 @@ export const A = styled.a`
 `;
 
 export const Section = styled.section`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;

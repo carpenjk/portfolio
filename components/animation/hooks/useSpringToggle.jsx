@@ -1,4 +1,5 @@
 import { useEffect, useState, useMemo } from 'react';
+import { useRef } from 'react';
 import { useCallback } from 'react';
 import { useSpring } from 'react-spring';
 
@@ -12,14 +13,20 @@ const useSpringToggle = ({
   to,
   loop,
   delay,
-  events
+  events,
 }) => {
   const [isOn, setIsOn] = useState(false);
+  const prevOn = useRef();
+  prevOn.current = isOn;
+
   const [styles, api] = useSpring(()=> ({
     display: 'inline-block',
     backfaceVisibility: 'hidden',
     config,
-    from
+    // from,
+    loop,
+    delay,
+    events
   }));
 
   const toggle = useCallback( (bln) =>{
@@ -28,11 +35,13 @@ const useSpringToggle = ({
 
   useEffect(() => {
     if(isOn) {
-      api.start({to, from, loop, delay, events});
+      api.start({...to});
       return;  
     }
-     api.start({to, from, reverse: true, loop, delay, events});
-  }, [isOn, api, from, to, loop, delay, events]);
+    if(!isOn){
+        api.start({...from});
+      }
+  }, [isOn, api, from, to, loop, delay, events, prevOn]);
 
   return ( [styles, toggle]);
 };

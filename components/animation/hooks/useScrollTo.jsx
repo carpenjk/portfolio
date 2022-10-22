@@ -1,6 +1,6 @@
 import {useSpring} from 'react-spring';
 
-const useScrollTo = (config) => {
+const useScrollTo = ({config, onRest}) => {
 	const [, api] = useSpring(() => ({y: 0}));
 
 	let isStopped = false;
@@ -8,7 +8,6 @@ const useScrollTo = (config) => {
 		isStopped = true;
 		window.removeEventListener('wheel', onWheel);
 	};
-
 	const scrollTo = (value, offset) => {
 		let y = 0;
 		if (typeof value === 'number') {
@@ -34,6 +33,9 @@ const useScrollTo = (config) => {
 			from: {y: window.scrollY},
 			config,
 			onRest: () => {
+				if(onRest) {
+					onRest();
+				}
 				isStopped = false;
 				window.removeEventListener('wheel', onWheel);
 			},

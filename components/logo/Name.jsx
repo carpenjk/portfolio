@@ -7,7 +7,7 @@ const StyledName = styled.h1`
   letter-spacing: normal;
   line-height: normal;
   color: ${props=> props.theme.colors.indigo11};
-  ${breakpoint("lg")`
+  ${breakpoint("xmd")`
   font-size: 34px;
 
 `}

@@ -1,12 +1,11 @@
 import { useSpring, useSpringRef,useChain, useTransition } from "react-spring";
 import { slideFromRight } from "./slideFromRight";
-import { splashAnimation } from "./spashAnimation";
+import { splashAnimation } from "./splashAnimation";
 
 const useOnLoadAnimation = ({navItems}) => {
   const navAnimationRef = useSpringRef();
   const splashAnimation1Ref = useSpringRef();
   const splashAnimation2Ref = useSpringRef();
-
 
   // useTransition used because of react-spring bug when combining useTrail and useChain
   const navAnimationTransition = useTransition( navItems, {
@@ -23,8 +22,7 @@ const useOnLoadAnimation = ({navItems}) => {
     ref: splashAnimation2Ref
   });
 
-  useChain([splashAnimation1Ref, splashAnimation2Ref, navAnimationRef], [0.5, 1.5, 4]);
-
+  useChain([splashAnimation1Ref, splashAnimation2Ref, navAnimationRef], [0.8, 2.5, 4]);
 
   return ( {
     splash: [splashAnimation1, splashAnimation2],

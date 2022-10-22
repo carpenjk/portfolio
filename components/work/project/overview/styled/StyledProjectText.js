@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-export const StyledProjectText = styled.div`
+import { AnimatedDiv } from '../../../../animation/AnimatedDiv';
+
+export const StyledProjectText = styled(AnimatedDiv)`
   position: relative;
   width: 100%;
-  height: 63px;
   max-height: 63px;
+  overflow: hidden;
 `;
 

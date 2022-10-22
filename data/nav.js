@@ -1,24 +1,28 @@
-export const navItems = [
+export const navData = [
   {
     name: 'Who',
+    // targetId: 'who',
     path: '#who',
-    scrollValue: '#who',
-    scrollOffset: -121
+    // scrollValue: '#who',
+    scrollOffset: [-69, -69, -93]
   },
   {
     name: 'Work',
+    // targetId: 'work',
     path: '#work',
-    scrollValue: '#work',
-    scrollOffset: -121
+    // scrollValue: '#work',
+    scrollOffset: [-25, -69, -93]
   },
   {
     name: 'Contact',
+    // targetId: 'contact',
     path: '#contact',
-    scrollValue: "#contact",
+    // scrollValue: "#contact",
     scrollOffset: 0
   },
   {
     name: 'Resume',
-    path: '#'
+    path: '#',
+    scroll: false
   }
 ];

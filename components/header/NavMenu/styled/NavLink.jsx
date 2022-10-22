@@ -12,7 +12,7 @@ export default styled.a`
   ${breakpoint('md')`
     font-size 20px;
   `}
-  ${breakpoint('lg')`
+  ${breakpoint('xmd')`
     font-size 24px;
   `}
 `;

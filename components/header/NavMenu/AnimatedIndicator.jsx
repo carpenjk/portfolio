@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {getProp} from '@carpenjk/prop-x/css';
 import { AnimatedSpan } from '../../animation/AnimatedSpan';
+import { useEffect } from 'react';
 
 const StyledIndicatorWrapper = styled.div`
   position: relative;
@@ -41,6 +42,7 @@ const AnimatedIndicator = ({
     indicatorLeft,
     style
   }) => {
+
   return (
     <StyledIndicatorWrapper $indicatorWidth={indicatorWidth}>
       <StyledAnimatedIndicator

@@ -19,7 +19,7 @@ const StyledFooterCTA = styled(Content)`
 `;
 
 const StyledCell = styled.div`
-  ${breakpoint(['zero', 'lg'])`
+  ${breakpoint(['zero', 'xmd'])`
     grid-row: ${getProp('gridRow')};
     grid-column: ${getProp('gridColumn')};
   `}
@@ -28,8 +28,18 @@ const StyledCell = styled.div`
 const FooterCTA = () => {
   return (
     <StyledFooterCTA>
-      <StyledCell gridRow={["2/3", "2/3", "1/2"]} gridColumn={["1/2", "1/2", "1/2"]}><Socials/></StyledCell>
-      <StyledCell gridRow={["1/2", "1/2", "1/2", "1/2"]} gridColumn={["1/2", "1/2", "2/3"]}><CTA /></StyledCell>
+      <StyledCell 
+        gridRow={["2/3", "2/3", "1/2"]}
+        gridColumn={["1/2", "1/2", "1/2"]}
+      >
+          <Socials/>
+      </StyledCell>
+      <StyledCell
+        gridRow={["1/2", "1/2", "1/2", "1/2"]}
+        gridColumn={["1/2", "1/2", "2/3"]}
+      >
+        <CTA />
+      </StyledCell>
     </StyledFooterCTA>
   );
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledExpandButton = styled.button`
+export const StyledExpandButton = styled.button`
   height: 100%;
   width: 100%;
   display: flex;
@@ -12,12 +12,7 @@ const StyledExpandButton = styled.button`
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   color: ${props=> props.theme.colors.indigo12};
   text-align: center;
-
 `;
-const ExpandButton = () => {
-return ( <StyledExpandButton>+ more</StyledExpandButton> );
-};
-export default ExpandButton;

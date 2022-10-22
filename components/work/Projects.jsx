@@ -1,33 +1,32 @@
-import styled from 'styled-components';
-import { useRef} from 'react';
-import useInScrollRange from '../hooks/useInScrollRange';
+import projects from '../../data/projects.json';
+import { useState } from 'react';
 import ProjectFilters from './projectFilters/ProjectFilters';
 import ProjectList from './ProjectList';
-import useBreakpoints from '@carpenjk/prop-x/useBreakpoints';
+import { StyledProjects } from './styled/StyledProjects';
+import usePinToTop from '../hooks/usePinToTop';
 import theme from '../../theme/theme';
+import useBreakpoints from '@carpenjk/prop-x/useBreakpoints';
 
-const StyledProjects = styled.div`
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 0 90px 0;
-  background-color: ${props=> props.theme.colors.indigo3};
-`;
-
+const getProjects = (filter) => filter === 'all'
+      ? projects
+      : projects.filter((project)=> project.type === filter);
+      
 const Projects = () => {
-  const br = useBreakpoints(theme);
-  const projectsRef = useRef();
-  const isFiltersPinned = useInScrollRange({target: projectsRef, top: br.current.width >= br.br.md ? 121 : 83 });
+  const breakpoints = useBreakpoints(theme.breakpoints);
+  const isMdBreakpoint = breakpoints.current.width >=  breakpoints.br.md;
+  const [filteredProjects, setFilteredProjects] = useState(projects);
+  const {isPinned, triggerRef, targetRef} = usePinToTop({
+    triggerOffsetTop: 8, targetOffsetTop: isMdBreakpoint ? 93 : 69});
+
   return ( 
-        <StyledProjects ref={projectsRef}>
+        <StyledProjects ref={triggerRef}>
           <ProjectFilters 
-            isPinned={isFiltersPinned}
-            // animation={filterAnimations}  
+            breakpoints={breakpoints}
+            isPinned={isPinned}
+            onFilter={(value)=> setFilteredProjects(getProjects(value))}
+            filtersRef={targetRef}
           />
-          <ProjectList />
+          <ProjectList breakpoints={breakpoints} projects={filteredProjects} />
         </StyledProjects>
   );
 };

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledCTA = styled.div`
     position: relative;
     padding: 16px;
-    margin: 0 0 16px 0;
+    margin: 0 0 32px 0;
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
@@ -17,7 +17,7 @@ const StyledCTA = styled.div`
     ${breakpoint('md')`
       margin: 0 0 0 16px;
     `}
-    ${breakpoint('lg')`
+    ${breakpoint('xmd')`
       font-size: 22px;
     `}
 `;

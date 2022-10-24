@@ -7,7 +7,7 @@ import { StyledMoreButton } from './styled/StyledMoreButton';
 import Project from './project/Project';
 
 const INCREMENT = 2;
-const ProjectList = ({projects}) => {
+const ProjectList = ({projects, breakpoints}) => {
 
   const [loaded, setLoaded] = useState(projects.slice(0, INCREMENT)); 
  
@@ -42,7 +42,7 @@ const ProjectList = ({projects}) => {
               style={{
                 width: "100%",
                 ...styles}}>
-                <Project project={item} />
+                <Project project={item} breakpoints={breakpoints} />
             </AnimatedDiv>
           </StyledProjectListItem>
           ))}

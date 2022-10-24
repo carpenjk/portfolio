@@ -22,7 +22,7 @@ const useOnLoadAnimation = ({navItems}) => {
     ref: splashAnimation2Ref
   });
 
-  useChain([splashAnimation1Ref, splashAnimation2Ref, navAnimationRef], [0.8, 2.5, 4]);
+  useChain([splashAnimation1Ref, splashAnimation2Ref, navAnimationRef], [0.8, 2.25, 4]);
 
   return ( {
     splash: [splashAnimation1, splashAnimation2],

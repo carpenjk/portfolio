@@ -10,11 +10,11 @@
     ],
     "overview": {
       "headline": "Book your greatest fake vacation!",
-      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can become an ownerous task in reverse engineering. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "text": "This demo site is a booking site like Airbnb which contains login, search, and reservation functionality utilizing mongoDB on the back end to keep track of property availability and reservations.  This site is my first foray into server-side development and conforms to REST API principles.  This project was a hands-on playground for much my learning journey, and inspired many of the other projects in my portfolio.",
       "bullets": [
-        "Custom themes styles using semantic names",
-        "Responsive styles set by custom breakpoints",
-        "Theme by variants and states"
+        "Search for Available properties using geocode lookup and other attributes",
+        "Login to view and make reservations",
+        "Sortable search results with pagination"
       ]
     },
     "links": [
@@ -27,15 +27,10 @@
         "text": "Coming soon!",
         "path": "/link",
         "icon": "/linkIcons/webIcon.svg"
-      },
-      {
-        "text": "npm",
-        "path": "/npm",
-        "icon": "/linkIcons/npmIcon.svg"
       }
     ],
     "snapshot": {
-      "src": "/snapshots/snapshot-md.png",
+      "src": "/snapshots/adventure-propertiesSnapshot.png",
       "alt": "Adventure Properties Screenshot"
     }
   },
@@ -45,16 +40,16 @@
     "tech": [
       "React",
       "Next.js",
-      "MongoDB",
-      "StyledComponents"
+      "StyledComponents",
+      "react-spring"
     ],
     "overview": {
       "headline": "Thank you for visiting!",
-      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "text": "I’m very grateful for your time and consideration.  Web development has been an aspiration for my entire professional life, and I am eager to start the next step in this journey.  I have worked on many projects as part of a team, but this is one of the only truly solo projects, making it even more meaningful. This site was built with React and Next.js to take advantage of performance optimizations by its static site generation approach and ease of hosting. I look forward to discussing how we can continue the journey, solving problems the entire way!",
       "bullets": [
-        "Custom themes styles using semantic names",
-        "Responsive styles set by custom breakpoints",
-        "Theme by variants and states"
+        "Responsive design custom built with care",
+        "Interactive project list",
+        "Spring-based animations"
       ]
     },
     "links": [
@@ -75,16 +70,15 @@
     "tech": [
       "React",
       "Next.js",
-      "MongoDB",
       "StyledComponents"
     ],
     "overview": {
-      "headline": "Book your greatest fake vacation!",
-      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "headline": "Responsive properties for React!",
+      "text": "Taking on static site generation (SSG) and server side rendering (SSR) in my first react project immediately introduced new challenges and concepts.  I developed the prop-x library to take better advantage of static site generation by doing more work in the static site generation process.  This means the logic is run when the site is built and deployed rather than when the user visits the web page.  Prop-x does this by providing an API to pass JavaScript properties into the styled-components CSS using responsive media queries.",
       "bullets": [
-        "Custom themes styles using semantic names",
-        "Responsive styles set by custom breakpoints",
-        "Theme by variants and states"
+        "Responsive properties in React components",
+        "Retrieve property values in styled-components based on breakpoints",
+        "Useful functions for transforming properties and applying additional logic"
       ]
     },
     "links": [
@@ -97,6 +91,11 @@
         "text": "npm",
         "path": "https://www.npmjs.com/package/@carpenjk/prop-x`",
         "icon": "/linkIcons/npmIcon.svg"
+      },
+      {
+        "text": "codepen",
+        "path": "/",
+        "icon": "/linkIcons/codeIcon.svg"
       }
     ],
     "snapshot": {
@@ -110,16 +109,16 @@
     "tech": [
       "React",
       "Next.js",
-      "MongoDB",
-      "StyledComponents"
+      "StyledComponents",
+      "Jest"
     ],
     "overview": {
-      "headline": "Book your greatest fake vacation!",
-      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "headline": "Responsive themes for reusable components!",
+      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliver with consistency, and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well.... a little more reusable and efficiently used. Simply styling a third party component can become an onerous task in reverse engineering. This was the inspiration for this library. Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
       "bullets": [
-        "Custom themes styles using semantic names",
-        "Responsive styles set by custom breakpoints",
-        "Theme by variants and states"
+        "Responsive theme styles using semantic names",
+        "Theme by variants and states",
+        "Project configured with jest testing framework & GitHub actions"
       ]
     },
     "links": [
@@ -129,9 +128,9 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "Coming soon!",
+        "text": "codepen",
         "path": "/",
-        "icon": "/linkIcons/webIcon.svg"
+        "icon": "/linkIcons/codeIcon.svg"
       }
     ],
     "snapshot": {
@@ -140,21 +139,54 @@
     }
   },
   {
+    "name": "searchbar",
+    "type": "reusableComponent",
+    "tech": [
+      "React",
+      "Next.js",
+      "StyledComponents"
+    ],
+    "overview": {
+      "headline": "Themeable searchbar using Themeweaver!",
+      "text": "This reusable searchbar component for React is customizable via a theme and accepts your own set of inputs.  This component served as a research and development of the prop-x and themeweaver libraries.",
+      "bullets": [
+        "Three teirs of expandable/collapsable inputs",
+        "Uses React Context to make selections available to other parts of the application",
+        "Responsively style with a custom theme"
+      ]
+    },
+    "links": [
+      {
+        "text": "github",
+        "path": "https://github.com/carpenjk/searchbar",
+        "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "codepen",
+        "path": "/",
+        "icon": "/linkIcons/codeIcon.svg"
+      }
+    ],
+    "snapshot": {
+      "src": "/snapshots/tw-searchbarSnapshot.png",
+      "alt": "tw-searchbar Screenshot"
+    }
+  },
+  {
     "name": "picture-tiles",
     "type": "reusableComponent",
     "tech": [
       "React",
       "Next.js",
-      "MongoDB",
       "StyledComponents"
     ],
     "overview": {
-      "headline": "Book your greatest fake vacation!",
-      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "headline": "Customizable grid of pictures!",
+      "text": "This is a reusable picture tile component and was built as an experimentation of the prop-x library. It is a breeze to configure for different screen sizes and to change dimensions.  It uses loading spinners and blurring to gracefully load images.",
       "bullets": [
-        "Custom themes styles using semantic names",
-        "Responsive styles set by custom breakpoints",
-        "Theme by variants and states"
+        "Picture grid with loading graphics",
+        "Use with static or variable number of pictures",
+        "Responsive properties makes it easy to configure for different screen sizes"
       ]
     },
     "links": [
@@ -164,13 +196,13 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "Coming soon!",
+        "text": "codepen",
         "path": "/",
-        "icon": "/linkIcons/webIcon.svg"
+        "icon": "/linkIcons/codeIcon.svg"
       }
     ],
     "snapshot": {
-      "src": "/snapshots/snapshot-md.png",
+      "src": "/snapshots/picture-tilesSnapshot.png",
       "alt": "Adventure Properties Screenshot"
     }
   },
@@ -180,16 +212,14 @@
     "tech": [
       "React",
       "Next.js",
-      "MongoDB",
       "StyledComponents"
     ],
     "overview": {
-      "headline": "Book your greatest fake vacation!",
-      "text": "Coming from the world of business and consulting where reusability was the key to efficiently deliever with consitstency,  and knowing reusability is a core concept of programming, I was a little surprised that reusable component frameworks and related libraries weren’t well....a little more reusable and efficiently used. Simply styling a third party component can be challenging that is when you can hack it to function the way it’s needed. This was the inspiration for this library.  Perhaps there is a path forward with Themeweaver and “headless” component systems like Radix UI.",
+      "headline": "Yet another lightbox component!",
+      "text": "This component is a simple lightbox component that demonstrates many core React concepts including managing state, effects, imperative refs,  memoization/callbacks, and custom hooks.",
       "bullets": [
-        "Custom themes styles using semantic names",
-        "Responsive styles set by custom breakpoints",
-        "Theme by variants and states"
+        "View a list of Images in a new portal",
+        "Uses mouse, keyboard, and swipe navigation"
       ]
     },
     "links": [
@@ -199,14 +229,47 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "Coming soon!",
+        "text": "codepen",
         "path": "/",
-        "icon": "/linkIcons/webIcon.svg"
+        "icon": "/linkIcons/codeIcon.svg"
       }
     ],
     "snapshot": {
-      "src": "/snapshots/snapshot-md.png",
+      "src": "/snapshots/lightboxSnapshot.png",
       "alt": "Adventure Properties Screenshot"
+    }
+  },
+  {
+    "name": "hooks",
+    "type": "library",
+    "tech": [
+      "React",
+      "Next.js"
+    ],
+    "overview": {
+      "headline": "Check out my collection of reusable hooks!!",
+      "text": "This is an assortment of custom hooks that I’ve created for reusable functionality in future projects.",
+      "bullets": [
+        "Custom hooks help comply with the DRY principle of programming",
+        "Custom Hooks help with separation of concerns and keeps components neat and organized",
+        "A repo of hooks can help speed up future development."
+      ]
+    },
+    "links": [
+      {
+        "text": "github",
+        "path": "https://github.com/carpenjk/hooks",
+        "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "codepen",
+        "path": "/",
+        "icon": "/linkIcons/codeIcon.svg"
+      }
+    ],
+    "snapshot": {
+      "src": "",
+      "alt": ""
     }
   }
 ]

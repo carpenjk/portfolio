@@ -6,14 +6,13 @@ export const StyledLinkIcon = styled.div`
   display: flex;
   justify-content: center;
   align-item: center;
-  margin: ${getProp('margin')};
-  width:  ${getProp('width')};
-  height:  ${getProp('height')};
+  margin: 0;
+  width: ${getProp('width')};
+  height: ${getProp('height')};
 
   ${breakpoint('xmd')`
-    width: 24px;
-    height: 24px;
-    margin: ${getProp('margin')};
+    width: ${getProp('width')};
+    height: ${getProp('height')};
   `}
 `;
 

@@ -5,11 +5,11 @@ import { StyledProjectLinkList } from './styled/StyledProjectLinkList';
 
 
 
-const ProjectLinks = ({links, style}) => {
+const ProjectLinks = ({breakpoints, links, style}) => {
 return (
   <StyledProjectLinks style={style}>
     <StyledProjectLinkList>
-    {links.map((link) => <li key={link.path}><ProjectLink link={link}/></li>)}
+      {links.map((link) => <li key={link.path}><ProjectLink breakpoints={breakpoints} link={link}/></li>)}
     </StyledProjectLinkList>
   </StyledProjectLinks> 
   );

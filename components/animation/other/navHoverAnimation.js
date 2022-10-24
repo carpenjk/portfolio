@@ -1,4 +1,4 @@
-export const linkHoverAnimation = ({width, color}) => ({
+export const navHoverAnimation = ({width, color}) => ({
   to: {
     width: width,
     backgroundColor: color,

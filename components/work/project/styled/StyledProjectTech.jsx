@@ -5,6 +5,7 @@ import { AnimatedDiv } from "../../../animation/AnimatedDiv";
 
 export const StyledProjectTech = styled(AnimatedDiv)`
   position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

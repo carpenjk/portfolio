@@ -8,7 +8,10 @@ export const StyledProjectSnapshot = styled(AnimatedDiv)`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+
+  img {
+    border-radius: 5px;
+  }
 
   ${breakpoint('xmd')`  
     grid-row: 1/2;

@@ -1,10 +1,10 @@
 import { StyledProjectTypeBox } from "./styled/StyledProjectTypeBox";
 import { StyledType } from "./styled/StyledType";
 
-const ProjectTypeBox = ({style, type}) => {
+const ProjectTypeBox = ({style, children}) => {
   return ( 
     <StyledProjectTypeBox style={style}>
-      <StyledType>{type}</StyledType>
+      <StyledType>{children}</StyledType>
     </StyledProjectTypeBox> );
 };
  

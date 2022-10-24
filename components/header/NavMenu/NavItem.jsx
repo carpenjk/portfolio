@@ -3,7 +3,7 @@ import theme from '../../../theme/theme';
 import { AnimatedSpan } from '../../animation/AnimatedSpan';
 import useBounce from '../../animation/hooks/useBounce';
 import useSpringToggle from '../../animation/hooks/useSpringToggle';
-import { linkHoverAnimation } from '../../animation/other/linkHoverAnimation';
+import { navHoverAnimation } from '../../animation/other/navHoverAnimation';
 import AnimatedIndicator from './AnimatedIndicator';
 import StyledNavItem from './styled/NavItem';
 
@@ -15,7 +15,7 @@ const NavItem = ({children, name, itemRef, isActive, isNavigating, ...props}) =>
     y: -5
   });
 
-  const [indicatorAnimationStyle, indicatorToggle] = useSpringToggle(linkHoverAnimation({
+  const [indicatorAnimationStyle, indicatorToggle] = useSpringToggle(navHoverAnimation({
     width:INDICATOR_WIDTH,
     color: theme.colors.indigo11
   }));

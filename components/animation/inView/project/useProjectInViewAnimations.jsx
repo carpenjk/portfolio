@@ -6,69 +6,37 @@ import theme from "../../../../theme/theme";
 import { fadeInMotionAnimation } from "./fadeInMotionAnimation";
 import { snapShotAnimation, snapshotSmallScreen } from "./snapShotAnimation";
 
-const thresholds = {
-  xmd: 0,
-  shortHeight: .45,
-  remaining: .48
-};
-const rootMargins = {
-  xmd: "25% 0px -75% 0px",
-  shortHeight: "50% 0px -10% 0px",
-  remaining: "50% 0px -5% 0px"
-};
-
 const useProjectInViewAnimations = () => {
   const breakpoints = useBreakpoints(theme.breakpoints);
-  const isLgScreen = breakpoints.current.width >= breakpoints.br['xmd'];
-
-  function getThreshold(){
-    if(isLgScreen){
-      return thresholds.xmd;
-    }
-    return breakpoints.current.height < 800
-      ? thresholds.shortHeight
-      : thresholds.remaining;
-  }
-
-  function getRootMargins(){
-    if(isLgScreen){
-      return rootMargins.xmd;
-    }
-    return breakpoints.current.height < 800
-      ? rootMargins.shortHeight
-      : rootMargins.remaining;
-  }
-
+  const isXmdScreen = breakpoints.current.width >= breakpoints.br['xmd'];
   const { ref, inView, entry } = useInView({
-      threshold: getThreshold(),
-      rootMargin: getRootMargins()
-      // threshold: .9,
-      // rootMargin: "500px 0px 0px 0px"
+      threshold: 0,
+      rootMargin: isXmdScreen ? "25% 0px -75% 0px" : "35% 0px -65% 0px"
   });
 
   const snapshotRef = useSpringRef();
   const overviewRef = useSpringRef();
   const techRef = useSpringRef();
   const linkRef = useSpringRef();
-  const snapshotConfig = useMemo(()=> isLgScreen 
+  const snapshotConfig = useMemo(()=> isXmdScreen 
     ? {...snapShotAnimation(inView), ref: snapshotRef}
     : {...snapshotSmallScreen, ref: snapshotRef}
-    , [isLgScreen, inView, snapshotRef]);
+    , [isXmdScreen, inView, snapshotRef]);
 
-  const overviewAnimation = useMemo(() => isLgScreen
+  const overviewAnimation = useMemo(() => isXmdScreen
     ? {...fadeInMotionAnimation({trigger: inView, y: 0}), ref: overviewRef}
     : {...fadeInMotionAnimation({trigger: inView, y: 0}), ref: overviewRef}
-    , [isLgScreen, overviewRef, inView]);
+    , [isXmdScreen, overviewRef, inView]);
 
-  const techAnimation = useMemo(() => isLgScreen
+  const techAnimation = useMemo(() => isXmdScreen
   ? {...fadeInMotionAnimation({trigger: inView, x: 12}), ref: techRef}
   : {...fadeInMotionAnimation({trigger: inView, x: 0}), ref: techRef}
-  , [isLgScreen, techRef, inView]);
+  , [isXmdScreen, techRef, inView]);
   
-  const linkAnimation = useMemo(() => isLgScreen
+  const linkAnimation = useMemo(() => isXmdScreen
   ? {...fadeInMotionAnimation({trigger: inView, x: 12,}), ref: linkRef}
   : {...fadeInMotionAnimation({trigger: inView, y: 0}), ref: linkRef}
-  , [isLgScreen, linkRef, inView]);
+  , [isXmdScreen, linkRef, inView]);
     
 
   const snapshotStyle = useSpring(snapshotConfig);

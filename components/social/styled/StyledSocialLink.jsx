@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoint, condition } from '@carpenjk/prop-x/css';
+import { breakpoint } from '@carpenjk/prop-x/css';
 
 export const StyledSocialLink = styled.div`
   display: flex;

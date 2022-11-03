@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { useSpring } from 'react-spring';
 import { NavContext } from '../header/NavMenu/NavContext';
 import SocialLink from '../social/SocialLink';
@@ -24,21 +24,21 @@ const SplashSocials = () => {
             <SocialLink 
               collapsed={true}
               icon="/linkIcons/githubIcon.svg"
-              href="/"
+              href="https://github.com/carpenjk"
             />
           </li>
           <li>
             <SocialLink 
               collapsed={true}
               icon="/linkIcons/linkedinIcon.svg"
-              href="/"
+              href="https://www.linkedin.com/in/jeremy-carpenter-7bb7096/"
             />
           </li>
           <li>
             <SocialLink
               collapsed={true}
               icon="/linkIcons/emailIcon.svg"
-              href="/"
+              href="mailto:jcarpenterdev@gmail.com"
             />
           </li>
         </ul>

@@ -16,11 +16,11 @@ export const StyledProjectTypeBox = styled(AnimatedDiv)`
     grid-column: 1/2;
     width: 333px;
     top: 0;
-    left: -9.5%;
-    width: 85%;
+    left: -25%;
+    width: 125%;
     min-width: 333px;
     transform-origin: top left;
-    transform: scale(1.3) perspective(400px) translate3d(50%, 0%, 0px);
+    transform: scale(1) perspective(400px) translate3d(50%, 0%, 0px);
     background: ${props=> props.theme.colors.indigo1};
 
     &::before {

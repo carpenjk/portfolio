@@ -16,13 +16,12 @@ export const StyledProjectSnapshot = styled(AnimatedDiv)`
   ${breakpoint('xmd')`  
     grid-row: 1/2;
     grid-column: 1/2;
-    width: 333px;
+    width: 125%;
+    object-fit: cover;
     position: absolute;
     top: 0;
-    left: -9.5%;
-    width: 85%;
     min-width: 333px;
     transform-origin: top left;
-    transform: scale(1.3) perspective(400px) translate3d(50%, 0%, 0px);
+    transform: scale(1) perspective(400px) translate3d(50%, 0%, 0px);
   `}
 `;

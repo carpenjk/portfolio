@@ -1,5 +1,5 @@
 export const scrollAnimationConfig = {
   mass: 1,
-  tension: 130,
-  friction: 45,
+  tension: 100,
+  friction: 35,
 };

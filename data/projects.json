@@ -25,7 +25,7 @@
       },
       {
         "text": "Coming soon!",
-        "path": "/link",
+        "path": "/",
         "icon": "/linkIcons/webIcon.svg"
       }
     ],
@@ -55,13 +55,13 @@
     "links": [
       {
         "text": "github",
-        "path": "https://github.com/carpenjk/adventure-properties",
+        "path": "https://github.com/carpenjk/portfolio",
         "icon": "/linkIcons/githubIcon.svg"
       }
     ],
     "snapshot": {
-      "src": "/snapshots/snapshot-md.png",
-      "alt": "Adventure Properties Screenshot"
+      "src": "",
+      "alt": ""
     }
   },
   {
@@ -89,7 +89,7 @@
       },
       {
         "text": "npm",
-        "path": "https://www.npmjs.com/package/@carpenjk/prop-x`",
+        "path": "https://www.npmjs.com/package/@carpenjk/prop-x",
         "icon": "/linkIcons/npmIcon.svg"
       },
       {
@@ -124,8 +124,13 @@
     "links": [
       {
         "text": "github",
-        "path": "https://github.com/carpenjk/prop-x",
+        "path": "https://github.com/carpenjk/themeweaver",
         "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "npm",
+        "path": "https://www.npmjs.com/package/@carpenjk/themeweaver",
+        "icon": "/linkIcons/npmIcon.svg"
       },
       {
         "text": "codepen",
@@ -162,8 +167,8 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "codepen",
-        "path": "/",
+        "text": "example",
+        "path": "https://codesandbox.io/s/searchbar-jwozu3",
         "icon": "/linkIcons/codeIcon.svg"
       }
     ],
@@ -192,7 +197,7 @@
     "links": [
       {
         "text": "github",
-        "path": "https://github.com/carpenjk/prop-x",
+        "path": "https://github.com/carpenjk/picture-tiles",
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
@@ -225,7 +230,7 @@
     "links": [
       {
         "text": "github",
-        "path": "https://github.com/carpenjk/prop-x",
+        "path": "https://github.com/carpenjk/lightbox",
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
@@ -260,11 +265,6 @@
         "text": "github",
         "path": "https://github.com/carpenjk/hooks",
         "icon": "/linkIcons/githubIcon.svg"
-      },
-      {
-        "text": "codepen",
-        "path": "/",
-        "icon": "/linkIcons/codeIcon.svg"
       }
     ],
     "snapshot": {

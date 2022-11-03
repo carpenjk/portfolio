@@ -9,7 +9,7 @@ export const StyledLink = styled.div`
   padding: 0 16px;
   height: 86px;
 
-  div {
+  > div {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "commit": "cz"
   },
   "dependencies": {
     "@carpenjk/prop-x": "^2.0.2",
@@ -22,7 +23,13 @@
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^2.0.7",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

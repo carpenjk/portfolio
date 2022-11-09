@@ -5,10 +5,10 @@ export const StyledHeadline = styled.h2`
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-family: 'Comfortaa';
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
+  line-height: 120%;
   color: ${props=> props.theme.colors.indigo12};
 `;

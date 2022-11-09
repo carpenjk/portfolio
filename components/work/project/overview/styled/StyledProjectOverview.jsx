@@ -15,7 +15,7 @@ export const StyledProjectOverview = styled(AnimatedDiv)`
 
   > * {
     margin-top: 0px;
-    margin-bottom: 64px;
+    margin-bottom: 58px;
   }
 
   > *:last-child {

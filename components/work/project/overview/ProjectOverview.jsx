@@ -7,7 +7,7 @@ const ProjectOverview = ({overview: {headline, text, bullets}, style}) => {
 return (
     <StyledProjectOverview style={style}>
       <Headline>{headline}</Headline>
-        <ProjectText text={text}></ProjectText>
+      <ProjectText text={text}></ProjectText>
       <ProjectBullets bullets={bullets}/>
     </StyledProjectOverview> 
    );

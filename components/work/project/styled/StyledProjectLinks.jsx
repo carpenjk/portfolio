@@ -14,5 +14,7 @@ export const StyledProjectLinks = styled(AnimatedDiv)`
     grid-column: 1/2;
     grid-template-columns: 1fr;
     align-self: end;
+    justify-self: start;
+    width: auto;
   `}
 `;

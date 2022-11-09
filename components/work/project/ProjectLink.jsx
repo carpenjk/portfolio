@@ -11,8 +11,8 @@ const ProjectLink = ({breakpoints, link}) => {
   const  {onMouseEnter, onMouseLeave, iconStyle, textStyle} = useLinkHoverAnimation();
   return ( 
     <Link href={link.path}>
-      <a target="_blank" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-        <StyledLink >
+      <a target="_blank" >
+        <StyledLink onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
           <AnimatedSpan style={iconStyle}>
             <LinkIcon 
               icon={link.icon} 

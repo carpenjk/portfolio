@@ -35,11 +35,7 @@ export const StyledLink = styled.div`
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: calc(225% - 600px);
-    min-width: calc(75% + 1px);
-    max-width: calc(100% + 2px - calc(600px - 100%));
     height: 86px;
-    
     > div:last-child {
       margin-top: 0;
       margin-left: 24px;

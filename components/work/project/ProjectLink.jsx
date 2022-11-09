@@ -8,18 +8,22 @@ import { StyledLink } from './styled/StyledProjectLink';
 
 const ProjectLink = ({breakpoints, link}) => {
   const isMounted = useIsMounted();
+  const linkAnimatedStyle = !link.disabled && isMounted && breakpoints.current.width >= breakpoints.br.xmd
+    ? textStyle
+    : undefined;
   const  {onMouseEnter, onMouseLeave, iconStyle, textStyle} = useLinkHoverAnimation();
   return ( 
     <Link href={link.path}>
       <a target="_blank" >
-        <StyledLink onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-          <AnimatedSpan style={iconStyle}>
+        <StyledLink onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} disabled={link.disabled}>
+          <AnimatedSpan style={!link.disabled ? iconStyle : undefined}>
             <LinkIcon 
               icon={link.icon} 
               direction={["vertical", "vertical", "horizontal"]}
             />
           </AnimatedSpan>
-          <AnimatedDiv style={isMounted && breakpoints.current.width >= breakpoints.br.xmd ? textStyle : undefined }>{link.text}</ AnimatedDiv>
+          <AnimatedDiv 
+            style={linkAnimatedStyle}>{link.text}</ AnimatedDiv>
         </StyledLink>
       </a>
     </Link>

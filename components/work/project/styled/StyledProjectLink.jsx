@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { breakpoint } from '@carpenjk/prop-x/css';
+import { breakpoint, condition } from '@carpenjk/prop-x/css';
 
 export const StyledLink = styled.div`
   display: flex;
@@ -20,6 +20,13 @@ export const StyledLink = styled.div`
     color: ${props=> props.theme.colors.grass11};
     border-radius: 5px;
   }
+
+  ${condition('disabled')`
+    cursor: default;
+    > div {
+      text-decoration-line: none;
+    }
+  `}
 
   > div:last-child {
     margin-top: 12px;

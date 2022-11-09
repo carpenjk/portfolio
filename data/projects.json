@@ -26,7 +26,8 @@
       {
         "text": "Coming soon!",
         "path": "/",
-        "icon": "/linkIcons/webIcon.svg"
+        "icon": "/linkIcons/webIcon.svg",
+        "disabled": true
       }
     ],
     "snapshot": {

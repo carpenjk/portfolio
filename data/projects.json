@@ -12,7 +12,7 @@
       "headline": "Book your greatest fake vacation!",
       "text": "This demo site is a booking site like Airbnb which contains login, search, and reservation functionality utilizing mongoDB on the back end to keep track of property availability and reservations.  This site is my first foray into server-side development and conforms to REST API principles.  This project was a hands-on playground for much my learning journey, and inspired many of the other projects in my portfolio.",
       "bullets": [
-        "Search for Available properties using geocode lookup and other attributes",
+        "Search for available properties using geocode lookup and other attributes",
         "Login to view and make reservations",
         "Sortable search results with pagination"
       ]
@@ -46,7 +46,7 @@
     ],
     "overview": {
       "headline": "Thank you for visiting!",
-      "text": "I’m very grateful for your time and consideration.  Web development has been an aspiration for my entire professional life, and I am eager to start the next step in this journey.  I have worked on many projects as part of a team, but this is one of the only truly solo projects, making it even more meaningful. This site was built with React and Next.js to take advantage of performance optimizations by its static site generation approach and ease of hosting. I look forward to discussing how we can continue the journey, solving problems the entire way!",
+      "text": "I’m very grateful for your time and consideration.  Web development has been an aspiration for my entire professional life, and I am eager to start the next step in this journey.  I have worked on many projects as part of a team, but these are some of the only truly solo projects, making them even more meaningful. This site was built with React and Next.js to take advantage of performance optimizations by its static site generation approach and ease of hosting. I look forward to discussing how we can continue the journey, solving problems the entire way!",
       "bullets": [
         "Responsive design custom built with care",
         "Interactive project list",
@@ -217,7 +217,7 @@
     ],
     "overview": {
       "headline": "Yet another lightbox component!",
-      "text": "This component is a simple lightbox component that demonstrates many core React concepts including managing state, effects, imperative refs,  memoization/callbacks, and custom hooks.",
+      "text": "This component is a simple lightbox component with a controller api that demonstrates many core React concepts including state management with useReducer, effects, imperative refs,  memoization/callbacks, and custom hooks.",
       "bullets": [
         "View a list of Images in a new portal",
         "Uses mouse, keyboard, and swipe navigation"
@@ -252,7 +252,7 @@
       "text": "This is an assortment of custom hooks that I’ve created for reusable functionality in future projects.",
       "bullets": [
         "Custom hooks help comply with the DRY principle of programming",
-        "Custom Hooks help with separation of concerns and keeps components neat and organized",
+        "Custom hooks help with separation of concerns and keeps components neat and organized",
         "A repo of hooks can help speed up future development."
       ]
     },

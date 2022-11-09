@@ -10,7 +10,7 @@ const SocialLink = ({children, href, icon}) => {
 const {onMouseEnter, onMouseLeave, iconStyle, textStyle} = useLinkHoverAnimation();
 return ( 
   <Link href={href}>
-    <a>
+    <a target="_blank" >
       <StyledSocialLink onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} >
         <AnimatedSpan style={iconStyle}><LinkIcon margin="0" width="24px" height="24px" icon ={icon} /></AnimatedSpan>
         <AnimatedSpan style={textStyle}>

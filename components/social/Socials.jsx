@@ -7,7 +7,7 @@ const Socials = () => {
       <li>
         <SocialLink 
           icon="/linkIcons/githubIcon.svg"
-          href="/"
+          href="https://github.com/carpenjk"
         >
             Github
         </SocialLink>
@@ -15,7 +15,7 @@ const Socials = () => {
       <li>
         <SocialLink 
           icon="/linkIcons/linkedinIcon.svg"
-          href="/"
+          href="https://www.linkedin.com/in/jeremy-carpenter-7bb7096/"
         >
           LinkedIn
         </SocialLink>
@@ -23,7 +23,7 @@ const Socials = () => {
       <li>
       <SocialLink
         icon="/linkIcons/emailIcon.svg"
-        href="/"
+        href="mailto:jcarpenterdev@gmail.com"
       >
         jcarpenterdev@gmail.com
       </SocialLink>

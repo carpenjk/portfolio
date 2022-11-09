@@ -91,11 +91,6 @@
         "text": "npm",
         "path": "https://www.npmjs.com/package/@carpenjk/prop-x",
         "icon": "/linkIcons/npmIcon.svg"
-      },
-      {
-        "text": "codepen",
-        "path": "/",
-        "icon": "/linkIcons/codeIcon.svg"
       }
     ],
     "snapshot": {
@@ -133,8 +128,8 @@
         "icon": "/linkIcons/npmIcon.svg"
       },
       {
-        "text": "codepen",
-        "path": "/",
+        "text": "demo",
+        "path": "https://codesandbox.io/s/searchbar-jwozu3",
         "icon": "/linkIcons/codeIcon.svg"
       }
     ],
@@ -201,8 +196,8 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "codepen",
-        "path": "/",
+        "text": "demo",
+        "path": "https://codesandbox.io/s/picture-tiles-lightbox-po0i1v",
         "icon": "/linkIcons/codeIcon.svg"
       }
     ],
@@ -234,8 +229,8 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "codepen",
-        "path": "/",
+        "text": "demo",
+        "path": "https://codesandbox.io/s/picture-tiles-lightbox-po0i1v",
         "icon": "/linkIcons/codeIcon.svg"
       }
     ],

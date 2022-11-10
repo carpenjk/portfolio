@@ -1,4 +1,4 @@
-import { useSpring } from "react-spring";
+import { useSpring } from "@react-spring/web";
 import { snapTopBorder } from "./snapTopBorder";
 import { snapTopText } from "./snapTopText";
 const useFiltersAnimations = ({isPinned, fontSize, top}) => {

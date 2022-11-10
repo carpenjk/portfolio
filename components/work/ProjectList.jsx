@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useTransition } from 'react-spring';
+import { useTransition } from '@react-spring/web';
 import { AnimatedDiv } from '../animation/AnimatedDiv';
 import { StyledProjectList } from './styled/StyledProjectList';
 import { StyledProjectListItem } from './styled/StyledProjectListItem';

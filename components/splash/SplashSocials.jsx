@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { useSpring } from 'react-spring';
+import { useSpring } from '@react-spring/web';
 import { NavContext } from '../header/NavMenu/NavContext';
 import SocialLink from '../social/SocialLink';
 import { StyledSplashSocials } from './styled/StyledSplashSocials';

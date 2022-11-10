@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from 'react';
 import { useRef } from 'react';
 import { useCallback } from 'react';
-import { useSpring } from 'react-spring';
+import { useSpring } from '@react-spring/web';
 
 const useSpringToggle = ({
   config = {

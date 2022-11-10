@@ -1,6 +1,6 @@
 import breakpoints from '../../../../theme/breakpoints';
 import { useState } from 'react';
-import { useSpring } from 'react-spring';
+import { useSpring } from '@react-spring/web';
 import { P2 } from '../../../base/base';
 import useBreakpoints from "@carpenjk/prop-x/useBreakpoints";
 import {StyledExpandButton} from './styled/ExpandButton';

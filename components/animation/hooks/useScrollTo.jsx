@@ -1,4 +1,4 @@
-import {useSpring} from 'react-spring';
+import {useSpring} from '@react-spring/web';
 
 const useScrollTo = ({config, onRest}) => {
 	const [, api] = useSpring(() => ({y: 0}));

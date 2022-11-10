@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { useSpring } from 'react-spring';
+import { useSpring } from '@react-spring/web';
 
 const useBounce = ({
   type = "toggle",

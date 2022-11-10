@@ -1,5 +1,5 @@
 import { useInView } from "react-intersection-observer";
-import { useSpring } from "react-spring";
+import { useSpring } from "@react-spring/web";
 import { fadeInAnimation } from "../inView/project/fadeInAnimation";
 
 const useFadeInView = ({

@@ -1,4 +1,4 @@
-import { useSpring, useSpringRef,useChain, useTransition } from "react-spring";
+import { useSpring, useSpringRef,useChain, useTransition } from "@react-spring/web";
 import { slideFromRight } from "./slideFromRight";
 import { splashAnimation } from "./splashAnimation";
 

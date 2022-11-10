@@ -1,7 +1,7 @@
 import useBreakpoints from "@carpenjk/prop-x/useBreakpoints";
 import { useMemo } from "react";
 import { useInView } from "react-intersection-observer";
-import { useChain, useSpring, useSpringRef } from "react-spring";
+import { useChain, useSpring, useSpringRef } from "@react-spring/web";
 import theme from "../../../../theme/theme";
 import { fadeInMotionAnimation } from "./fadeInMotionAnimation";
 import { snapShotAnimation, snapshotSmallScreen } from "./snapShotAnimation";

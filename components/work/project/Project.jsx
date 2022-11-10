@@ -14,7 +14,14 @@ import { StyledStarWrapper } from './styled/StyledStarWrapper';
 const Project = ({ project, breakpoints}) => {
   const [isMounted, setIsMounted] = useState(false);
   const {name, tech, type, snapshot, overview, links} = project;
-  const {inViewRef, snapshotStyle, overviewStyle, techStyle, linkStyle} = useProjectInViewAnimations();
+  const {
+    inViewRef,
+    snapshotStyle,
+    overviewStyle,
+    techStyle,
+    linkStyle
+  } = useProjectInViewAnimations();
+ 
   useEffect(() => {
     setIsMounted(true);
   }, []);

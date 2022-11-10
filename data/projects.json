@@ -69,6 +69,7 @@
     "name": "Prop-x",
     "type": "library",
     "tech": [
+      "Javascript",
       "React",
       "Next.js",
       "StyledComponents"

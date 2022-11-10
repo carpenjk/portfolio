@@ -14,7 +14,7 @@ const Socials = () => {
       </li>
       <li>
         <SocialLink 
-          icon="/linkIcons/linkedinIcon.svg"
+          icon="/linkIcons/linkedInIcon.svg"
           href="https://www.linkedin.com/in/jeremy-carpenter-7bb7096/"
         >
           LinkedIn

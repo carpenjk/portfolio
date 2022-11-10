@@ -20,12 +20,12 @@ return (
       <StyledBadges gap={['12px', '18px', '24px']}>
         <StyledBadge>Javascript</StyledBadge>
         <StyledBadge>React</StyledBadge>
-        <ImageBadge padding={["0 4px", "0 8px"]} image={nextImage}></ImageBadge>
+        <ImageBadge alt="Next" padding={["0 4px", "0 8px"]} image={nextImage}></ImageBadge>
         <StyledBadge>Node.js</StyledBadge>
         <StyledBadge>MongoDB</StyledBadge>
         <StyledBadge>SQL</StyledBadge>
         <StyledBadge>GIT</StyledBadge>
-        <ImageBadge padding={["0 6px", "0 8px"]} image={npmImage}></ImageBadge>
+        <ImageBadge alt="npm" padding={["0 6px", "0 8px"]} image={npmImage}></ImageBadge>
         <StyledBadge>Jest</StyledBadge>
         <StyledBadge>Contentful</StyledBadge>
       </StyledBadges> 

@@ -33,7 +33,10 @@ const NavMenu = () => {
             <AnimatedDiv key={item.name} >
               <NavItem item={item.name} name={item.name} isNavigating={isNavigating} isActive={getIsActive(index)} >
                 <Link passHref href={item.path}>
-                  <NavLink {...linkProps} href={item.path}  onClick={handleClick}>
+                  <NavLink
+                   {...linkProps} 
+                   onClick={item.scrollOffset === undefined ? undefined : handleClick}
+                  >
                     {item.name}
                   </NavLink>
                 </Link>

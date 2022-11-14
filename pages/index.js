@@ -14,6 +14,7 @@ import useOnLoadAnimation from '../components/animation/onPageLoad/useOnLoadAnim
 import useScrollNav from '../components/header/useScrollNav';
 import { NavContextProvider } from '../components/header/NavMenu/NavContext';
 import { scrollAnimation } from '../components/animation/scrollTo/scrollAnimation';
+import NavLink from '../components/header/NavMenu/styled/NavLink';
 
 export default function Home() {
   const navNames = navData.map(item=> item.name);

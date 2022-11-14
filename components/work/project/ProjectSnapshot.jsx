@@ -10,6 +10,7 @@ const ProjectSnapshot = ({style, image}) => {
         alt={image.alt} 
         width={"700px"}
         height={"560px"}
+        quality="85"
       />
     </StyledProjectSnapshot>
     );

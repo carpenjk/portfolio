@@ -1,10 +1,8 @@
-import Image from 'next/image';
 import * as NavigationMenu from '@radix-ui/react-navigation-menu';
 import Link from 'next/link';
 import { getIndexedPropValue } from '@carpenjk/prop-x';
 import useBreakpoints from '@carpenjk/prop-x/useBreakpoints';
 import { AnimatedDiv } from '../../animation/AnimatedDiv';
-import IndicatorArrow from './styled/IndicatorArrow';
 import StyledNavMenu from './styled/NavMenu';
 import  NavItem from './NavItem';
 import  NavLink  from './styled/NavLink';
@@ -15,11 +13,13 @@ import {NavContext} from './NavContext';
 
 const NavMenu = () => {
   const breakpoint = useBreakpoints(theme.breakpoints);
-  const {navItems, currentItem, setCurrentItemIndex, isNavigating, setIsNavigating, getIsActive, scrollTo} = useContext(NavContext);
+  const {navItems, setCurrentItemIndex, isNavigating, setIsNavigating, getIsActive, scrollTo} = useContext(NavContext);
+  
   return ( 
     <StyledNavMenu >
       <NavList >
         {navItems.map((item, index)=> {
+          const linkProps = item.props || {};
           const handleClick = (e) => {
             e.preventDefault();
             setCurrentItemIndex(index);
@@ -32,16 +32,11 @@ const NavMenu = () => {
           return (
             <AnimatedDiv key={item.name} >
               <NavItem item={item.name} name={item.name} isNavigating={isNavigating} isActive={getIsActive(index)} >
-                <Link  passHref href={item.path}>
-                  <NavLink onClick={handleClick}>
+                <Link passHref href={item.path}>
+                  <NavLink {...linkProps} href={item.path}  onClick={handleClick}>
                     {item.name}
                   </NavLink>
                 </Link>
-                {/* {item.name === 'Contact' && (
-                  <IndicatorArrow>
-                    <Image src="/footer/upArrow.svg" alt="arrow" width="47px" height="36px" />
-                  </IndicatorArrow>
-                )} */}
               </NavItem>
             </AnimatedDiv>
           );

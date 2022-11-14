@@ -14,7 +14,7 @@ const ProjectLink = ({breakpoints, link}) => {
   const  {onMouseEnter, onMouseLeave, iconStyle, textStyle} = useLinkHoverAnimation();
   return ( 
     <Link href={link.path}>
-      <a target="_blank" >
+      <a target="_blank"  disabled={link.disabled} style={{pointerEvents: link.disabled ? "none" : "initial" }}>
         <StyledLink onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} disabled={link.disabled}>
           <AnimatedSpan style={!link.disabled ? iconStyle : undefined}>
             <LinkIcon 

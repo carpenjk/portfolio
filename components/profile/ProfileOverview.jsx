@@ -14,7 +14,7 @@ return ( <StyledProfileOverview>
     work, but software development was calling me.
   </P1>
   <P1>
-    Lately I have been focused on writing reusuable components with the React framework and refining the <Link passHref href='https://www.npmjs.com/package/@carpenjk/prop-x'><A>prop-x</A></Link> and <Link passHref href='https://www.npmjs.com/package/@carpenjk/themeweaver'><A>themeweaver</A></Link> libraries 
+    Lately I have been focused on writing reusuable components with the React framework and refining the <Link passHref href='https://www.npmjs.com/package/@carpenjk/prop-x'><A target="_blank">prop-x</A></Link> and <Link passHref href='https://www.npmjs.com/package/@carpenjk/themeweaver'><A target="_blank">themeweaver</A></Link> libraries 
     I created for using responsive properties and theming reusable components.
   </P1>
   <P1>

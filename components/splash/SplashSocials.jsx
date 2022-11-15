@@ -31,7 +31,7 @@ const SplashSocials = () => {
             <SocialLink 
               collapsed={true}
               icon="/linkIcons/linkedInIcon.svg"
-              href="https://www.linkedin.com/in/jeremy-carpenter-7bb7096/"
+              href="https://www.linkedin.com/in/jcarpenterdev"
             />
           </li>
           <li>

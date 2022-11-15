@@ -21,7 +21,6 @@ return (
         <StyledBadge>Javascript</StyledBadge>
         <StyledBadge>React</StyledBadge>
         <ImageBadge alt="Next" padding={["0 4px", "0 8px"]} image={nextImage}></ImageBadge>
-        <StyledBadge>Node.js</StyledBadge>
         <StyledBadge>MongoDB</StyledBadge>
         <StyledBadge>SQL</StyledBadge>
         <StyledBadge>GIT</StyledBadge>

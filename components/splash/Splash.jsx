@@ -10,7 +10,7 @@ const Splash = ({animation}) => {
   <StyledSplash>
     <StyledSplashContent>
       <AnimatedSpan  style={h1Animate}><h1>I build things for the web</h1></AnimatedSpan>
-      <AnimatedSpan style={h2Animate}><h2>Web apps and javascript libraries for making reusable components</h2></AnimatedSpan>
+      <AnimatedSpan style={h2Animate}><h2>Web apps and JavaScript libraries for making reusable components</h2></AnimatedSpan>
     </StyledSplashContent>
     <SpashSocials />
   </StyledSplash> );

@@ -18,7 +18,7 @@ const npmImage = {
 const Badges = () => {
 return ( 
       <StyledBadges gap={['12px', '18px', '24px']}>
-        <StyledBadge>Javascript</StyledBadge>
+        <StyledBadge>JavaScript</StyledBadge>
         <StyledBadge>React</StyledBadge>
         <ImageBadge alt="Next" padding={["0 4px", "0 8px"]} image={nextImage}></ImageBadge>
         <StyledBadge>MongoDB</StyledBadge>

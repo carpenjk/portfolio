@@ -18,18 +18,12 @@ const ProjectList = ({projects, breakpoints}) => {
   const transitions = useTransition( loaded, {
     from: { y: '100vh', opacity: 0  },
     enter: { y: '0vh', opacity: 1 },
-    // update: { y: '100vh', opacity: 0  },
     leave: { y: '100vh', opacity: 0 },
-    // delay: 50,
-    reverse: true,
     config: { mass: 1, tension: 850, friction: 180 },
-    exitBeforeEnter: true,
-    // reset: true,
-    keys: project=> project.name
+    keys: item=> item.name,
   });
 
   const handleLoadMoreClick = () => {
-   
     setLoaded(prev => 
       ([...prev, ...projects.slice(prev.length, prev.length + INCREMENT)]));
   };
@@ -37,7 +31,7 @@ const ProjectList = ({projects, breakpoints}) => {
   return ( 
       <StyledProjectList>
         {transitions((styles, item) => (
-          <StyledProjectListItem key={item.name}>
+          <StyledProjectListItem >
             <AnimatedDiv
               style={{
                 width: "100%",

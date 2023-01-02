@@ -8,11 +8,9 @@ import theme from '../../theme/theme';
 import useBreakpoints from '@carpenjk/prop-x/useBreakpoints';
 
 const getProjects = (filter) => {
-  console.log("🚀 ~ file: Projects.jsx ~ line 11 ~ getProjects ~ filter", filter);
   const filtered = filter === 'all'
   ? projects
   : projects.filter((project) => project.type === filter);
-  console.log("🚀 ~ file: Projects.jsx ~ line 13 ~ getProjects ~ filtered", filtered);
   return filtered;
 };
       

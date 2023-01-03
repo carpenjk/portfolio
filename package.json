@@ -10,7 +10,7 @@
     "commit": "cz"
   },
   "dependencies": {
-    "@carpenjk/prop-x": "^2.0.2",
+    "@carpenjk/prop-x": "^3.0.0",
     "@radix-ui/colors": "^0.1.8",
     "@radix-ui/react-navigation-menu": "1.0.0",
     "@radix-ui/react-tabs": "1.0.0",

@@ -9,7 +9,7 @@ const StyledHeader = styled(Content)`
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
   background-color: ${props=> props.theme.colors.indigo1};
   z-index: 100;
 

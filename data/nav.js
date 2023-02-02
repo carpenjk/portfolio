@@ -16,7 +16,7 @@ export const navData = [
   },
   {
     name: 'Resume',
-    path: '/documents/Jeremy_Carpenter_Resume_2022.pdf',
+    path: '/documents/Jeremy_Carpenter_Resume.pdf',
     scroll: false,
     external: true,
     props: {

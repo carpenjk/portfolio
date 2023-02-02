@@ -24,10 +24,9 @@
         "icon": "/linkIcons/githubIcon.svg"
       },
       {
-        "text": "Coming soon!",
-        "path": "/",
-        "icon": "/linkIcons/webIcon.svg",
-        "disabled": true
+        "text": "myadventureproperties.com",
+        "path": "https://myadventureproperties.com/",
+        "icon": "/linkIcons/webIcon.svg"
       }
     ],
     "snapshot": {
@@ -239,6 +238,41 @@
     "snapshot": {
       "src": "/snapshots/lightboxSnapshot.png",
       "alt": "Adventure Properties Screenshot"
+    }
+  },
+  {
+    "name": "use-breakpoints",
+    "type": "library",
+    "tech": [
+      "React",
+      "TypeScript",
+      "Jest",
+      "React-Testing-Libray"
+    ],
+    "overview": {
+      "headline": "A React custom hook for utilizing breakpoint conditions!",
+      "text": "It is a common requirement to condition component rendering on screen width, and this hook seeks to fill that need with a simplicity.  A CSS media query may still be the preferred approach for screen width logic in many cases involving styling, but this hook is great when a CSS solution won’t cut it.  However, beware of utilizing both CSS media queries together with breakpoint logic in JavaScript as there could be timing issues.  This component utilizes React hooks but could benefit from future enhancements utilizing the React context API to optimize performance.  It was a joy to develop such a useful utility.",
+      "bullets": [
+        "Conditionally render React components based on screen width/resolution",
+        "Trigger side effects when screen width passes breakpoints",
+        "Access current screen size and breakpoint information in any component"
+      ]
+    },
+    "links": [
+      {
+        "text": "github",
+        "path": "https://github.com/carpenjk/use-breakpoints",
+        "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "npm",
+        "path": "https://www.npmjs.com/package/@carpenjk/use-breakpoints",
+        "icon": "/linkIcons/npmIcon.svg"
+      }
+    ],
+    "snapshot": {
+      "src": "",
+      "alt": ""
     }
   },
   {

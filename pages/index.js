@@ -52,7 +52,6 @@ export default function Home() {
         <Footer id="contact" ref={navItems[2].ref}>
           <FooterCTA />
         </Footer>
-        {/* <Spacer height="82px" width={"100%"}  /> */}
       </NavContextProvider>
     </div>
   );

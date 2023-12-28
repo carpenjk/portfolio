@@ -1,5 +1,42 @@
 [
   {
+    "name": "Workflow Tracker",
+    "type": "website",
+    "tech": [
+      "React",
+      "Node.js",
+      "MySQL",
+      "Express.js",
+      "Tailwind CSS"
+    ],
+    "overview": {
+      "headline": "Gain control and visibility into your company's workflows",
+      "text": "My experience delivering data centric fully integrated business solutions, provided for a natural transition to full stack development, which is like incorporating centralized logic and data integration with the user interface of the app.  This app lets you define and deploy instances of workflows with assignable tasks and dependencies. Have a repeating monthly close schedule?  Define this workflow and deploy it monthly to see visibility into the progress and task owners.",
+      "bullets": [
+        "Login to create, manage, and track workflows and their instances",
+        "Full stack CRUD application with MVC design practices and REST API",
+        "REST api and relational data modeling"
+      ]
+    },
+    "links": [
+      {
+        "text": "github",
+        "path": "https://github.com/carpenjk/workflow-manager",
+        "icon": "/linkIcons/githubIcon.svg"
+      },
+      {
+        "text": "Coming Soon!",
+        "path": "",
+        "icon": "/linkIcons/webIcon.svg",
+        "disabled": true
+      }
+    ],
+    "snapshot": {
+      "src": "/snapshots/adventure-propertiesSnapshot.png",
+      "alt": "Adventure Properties Screenshot"
+    }
+  },
+  {
     "name": "Adventure Properties",
     "type": "website",
     "tech": [

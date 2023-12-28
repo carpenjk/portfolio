@@ -1,5 +1,5 @@
 import { getIndexedPropValue } from '@carpenjk/prop-x';
-import { StyledBadge } from './StyledBadge';
+import { StyledBadge } from './styled/StyledBadge';
 
 const ImageBadge = ({image, ...props}) => {
   const {width: imgWidth, height: imgHeight, ...remImgProps} = image;

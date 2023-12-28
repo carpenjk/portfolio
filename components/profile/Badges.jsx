@@ -1,4 +1,4 @@
-import { StyledBadge } from './StyledBadge';
+import { StyledBadge } from './styled/StyledBadge';
 import ImageBadge from './ImageBadge';
 import { StyledBadges } from './styled/StyledBadges';
 
@@ -15,6 +15,13 @@ const npmImage = {
   src: "/techIcons/npm.svg"
 
 };
+
+const tailwindImage = {
+  width:['160px','160px'],
+  height:['20px','32px'],
+  alt: "Next.js",
+  src: "/techIcons/tailwindcss-logotype.svg"
+};
 const Badges = () => {
 return ( 
       <StyledBadges gap={['12px', '18px', '24px']}>
@@ -22,6 +29,7 @@ return (
         <StyledBadge>TypeScript</StyledBadge>
         <StyledBadge>React</StyledBadge>
         <ImageBadge alt="Next" padding={["0 4px", "0 8px"]} image={nextImage}></ImageBadge>
+        <ImageBadge alt="Tailwind CSS" padding={["0 4px", "0 8px"]} image={tailwindImage}></ImageBadge>
         <StyledBadge>MongoDB</StyledBadge>
         <StyledBadge>SQL</StyledBadge>
         <StyledBadge>GIT</StyledBadge>

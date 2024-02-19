@@ -2,31 +2,36 @@ import styled from 'styled-components';
 import { breakpoint } from '@carpenjk/prop-x/css';
 import { Content } from '../base/base';
 
-const StyledHeader = styled(Content)`
+const StyledHeader = styled.div`
   position: fixed;
   top: 0px;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   padding: env(safe-area-inset-top) env(safe-area-inset-right) 0 env(safe-area-inset-left);
-  background-color: ${props=> props.theme.colors.indigo1};
   z-index: 100;
 
-  ${breakpoint("md")`
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  `}
 `;
 
-const StyledInnerContainer = styled.div`
+const StyledHeaderBackground = styled.div`
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: ${props=> props.theme.colors.indigo1};
+  opacity: 1;
+`;
+
+const StyledInnerContainer = styled(Content)`
   position: relative;
-  width: 100%;  
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;
+  align-items: center;
   padding: 16px 4px 8px 4px;
 
   ${breakpoint("md")`
@@ -44,6 +49,7 @@ const Header = ({children}) => {
 return ( 
   <header>
     <StyledHeader>
+      <StyledHeaderBackground/>
       <StyledInnerContainer>{children}</StyledInnerContainer>
     </StyledHeader>
   </header> );

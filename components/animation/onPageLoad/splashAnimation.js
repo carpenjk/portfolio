@@ -1,5 +1,6 @@
 export const splashAnimation = {
   opacity: 1,
+  delay: 750,
   from: {
     opacity: 0
   },

@@ -4,6 +4,7 @@
     "type": "website",
     "tech": [
       "React",
+      "TypeScript",
       "Node.js",
       "MySQL",
       "Express.js",

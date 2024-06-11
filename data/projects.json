@@ -23,7 +23,7 @@
     "links": [
       {
         "text": "github",
-        "path": "https://github.com/carpenjk/workflow-manager",
+        "path": "https://github.com/carpenjk/orca",
         "icon": "/linkIcons/githubIcon.svg"
       },
       {

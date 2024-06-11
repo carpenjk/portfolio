@@ -1,10 +1,11 @@
 [
   {
-    "name": "Workflow Tracker",
+    "name": "Orca",
     "type": "website",
     "tech": [
       "React",
       "TypeScript",
+      "Redux",
       "Node.js",
       "MySQL",
       "Express.js",
